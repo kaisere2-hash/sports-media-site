@@ -1,109 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Media Hub - Materialize Page</title>
-    
-    <!-- Materialize CSS CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Sports Media Hub</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+    }
+    .brand-logo {
+      font-weight: bold;
+    }
+    .section-title {
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav class="blue darken-2">
-        <div class="nav-wrapper container">
-            <a href="index.html" class="brand-logo">SportsHub</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page1.html">Articles</a></li>
-                <li><a href="page2.html">Media</a></li>
-                <li><a href="materialize.html">Highlights</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- NAVBAR -->
+<nav class="black">
+  <div class="nav-wrapper container">
+    <a href="#" class="brand-logo">SMG</a>
+    <ul class="right">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Highlights</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- Hero Section -->
-    <div class="section center blue lighten-5">
-        <h3>Sports Highlights & Media</h3>
-        <p class="flow-text">Explore featured athletes, articles, and exclusive videos from the world of sports.</p>
-    </div>
+<!-- HERO -->
+<div class="container center">
+  <h3>Same Kid, New Game</h3>
+  <p>Next-gen sports storytelling and media</p>
+</div>
 
-    <!-- Media Cards Section -->
-    <div class="container section">
-        <h4 class="center-align">Featured Content</h4>
-        <div class="row">
-            <!-- Card 1: Article -->
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/photo1.jpg" alt="Game Recap">
-                        <span class="card-title orange lighten-1 black-text">Game Recap</span>
-                    </div>
-                    <div class="card-content">
-                        <p>Highlights and analysis from last night’s championship game. See top plays and key stats.</p>
-                    </div>
-                </div>
-            </div>
+<!-- CAROUSEL (HIGHLIGHTS) -->
+<div class="container section">
+  <h5 class="section-title">🔥 Featured Highlights</h5>
 
-            <!-- Card 2: Athlete Profile -->
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/photo2.jpg" alt="Athlete Profile">
-                        <span class="card-title orange lighten-1 black-text">Athlete Spotlight</span>
-                    </div>
-                    <div class="card-content">
-                        <p>Get to know the rising stars in basketball and football with exclusive interviews and stats.</p>
-                    </div>
-                </div>
-            </div>
+  <div class="carousel">
+    <a class="carousel-item">
+      <img src="https://via.placeholder.com/300x200?text=Game+Winner">
+    </a>
+    <a class="carousel-item">
+      <img src="https://via.placeholder.com/300x200?text=Top+Plays">
+    </a>
+    <a class="carousel-item">
+      <img src="https://via.placeholder.com/300x200?text=Interview">
+    </a>
+    <a class="carousel-item">
+      <img src="https://via.placeholder.com/300x200?text=Training">
+    </a>
+  </div>
+</div>
 
-            <!-- Card 3: Podcast/Media -->
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/photo3.jpg" alt="Sports Podcast">
-                        <span class="card-title orange lighten-1 black-text">Podcast Episode</span>
-                    </div>
-                    <div class="card-content">
-                        <p>Listen to the latest episode of our sports media podcast covering trending sports news.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- COLLAPSIBLE (CONTENT SECTIONS) -->
+<div class="container section">
+  <h5 class="section-title">📌 What We Do</h5>
 
-    <!-- Circular Image Section -->
-    <div class="container center section">
-        <h5>Featured Journalist</h5>
-        <img src="images/profile.jpg" alt="Journalist Profile" class="circle responsive-img" style="width: 200px;">
-        <p>Meet our lead sports journalist bringing you the latest news, interviews, and insights from the field.</p>
-    </div>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">videocam</i>Game Highlights
+      </div>
+      <div class="collapsible-body">
+        <span>We capture the biggest moments and turn them into high-quality highlight reels.</span>
+      </div>
+    </li>
 
-    <!-- Video Embed Section -->
-    <div class="container section">
-        <h5 class="center-align">Video Highlight</h5>
-        <div class="video-container">
-            <iframe width="853" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-            frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">mic</i>Athlete Interviews
+      </div>
+      <div class="collapsible-body">
+        <span>Real stories from real athletes. We focus on personality and journey.</span>
+      </div>
+    </li>
 
-    <!-- Footer -->
-    <footer class="page-footer blue darken-2">
-        <div class="container center">
-            <p class="white-text">© 2026 SportsHub | Built with Materialize CSS</p>
-        </div>
-    </footer>
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">trending_up</i>Social Media Content
+      </div>
+      <div class="collapsible-body">
+        <span>Short-form content built for platforms like TikTok and Instagram.</span>
+      </div>
+    </li>
+  </ul>
+</div>
 
-    <!-- Materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- SUBSCRIBE SECTION -->
+<div class="container section center">
+  <h5>📬 Join Our Community</h5>
+  <p>Get the latest highlights and content drops</p>
+
+  <input type="email" id="email" placeholder="Enter your email" style="color:white;">
+  <br><br>
+  <button class="btn red" onclick="subscribe()">Subscribe</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer black">
+  <div class="container center">
+    © 2026 Sports Media Group
+  </div>
+</footer>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- JS INITIALIZATION -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Carousel
+    var carousels = document.querySelectorAll('.carousel');
+    M.Carousel.init(carousels, {
+      fullWidth: false,
+      indicators: true
+    });
+
+    // Collapsible
+    var collapsibles = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibles);
+  });
+
+  // Subscribe button interaction
+  function subscribe() {
+    let email = document.getElementById("email").value;
+
+    if(email === "") {
+      alert("Please enter a valid email.");
+    } else {
+      alert("Welcome to SMG, " + email + "!");
+    }
+  }
+</script>
+
 </body>
 </html>
