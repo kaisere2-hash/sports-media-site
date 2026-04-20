@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports Media - Interactive</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background: #222;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00ccff;
+    }
+
+    header {
+      padding: 40px;
+      background: url("https://via.placeholder.com/1200x400") no-repeat center/cover;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background: #00ccff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0099cc;
+    }
+
+    .highlight-box {
+      width: 300px;
+      height: 200px;
+      background: red;
+      margin: 20px auto;
+      display: none;
+    }
+
+    img {
+      width: 300px;
+      margin-top: 15px;
+    }
+
+    #newsText {
+      display: none;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="media.html">Media</a>
+  <a href="jquery.html">Interactive</a>
+<a href="jquery.html">Interactive</a>
+</nav>
+<!-- HEADER -->
+<header>
+  <h1>Sports Media Interactive Zone</h1>
+  <p>Explore highlights, news, and animations</p>
+</header>
+
+<!-- SECTION 1: HIGHLIGHTS -->
+<section>
+  <h2>Game Highlights</h2>
+  <p>Click below to reveal today's top highlight</p>
+
+  <button id="showHighlight">Show Highlight</button>
+  <button id="hideHighlight">Hide Highlight</button>
+
+  <div class="highlight-box"></div>
+</section>
+
+<!-- SECTION 2: PLAYER IMAGE -->
+<section>
+  <h2>Featured Player</h2>
+  <p>Click to fade the image in and out</p>
+
+  <button id="fadePlayer">Toggle Player</button>
+  <br>
+
+  <img id="playerImg" src="https://via.placeholder.com/300">
+</section>
+
+<!-- SECTION 3: SPORTS NEWS -->
+<section>
+  <h2>Latest Sports News</h2>
+  <p>Click to expand breaking news</p>
+
+  <button id="toggleNews">Show/Hide News</button>
+
+  <p id="newsText">
+    Big game tonight! Teams are battling for playoff position in one of the most anticipated matchups of the season.
+  </p>
+</section>
+
+<!-- jQuery SCRIPT -->
+<script>
+  $(document).ready(function(){
+
+    // Show / Hide Highlight
+    $("#showHighlight").click(function(){
+      $(".highlight-box").fadeIn();
+    });
+
+    $("#hideHighlight").click(function(){
+      $(".highlight-box").fadeOut();
+    });
+
+    // Fade Player
+    $("#fadePlayer").click(function(){
+      $("#playerImg").fadeToggle();
+    });
+
+    // Slide News
+    $("#toggleNews").click(function(){
+      $("#newsText").slideToggle();
+    });
+
+  });
+</script>
+
+</body>
+</html>
